@@ -1,0 +1,25 @@
+Algorithm: method for solving a problem.
+Data structure: method to store information.
+
+The primary reason to learn about algorithms is that this discipline gives us the potential to reap huge savings, even to the point of enabling us to do tasks that would 
+otherwise be impossible.
+
+Their impact is broad and far-reaching.
+Internet : Web search, packet routing , DFS..
+Computers : circuit layout, file system, compilers..
+Computer graphics : Movies, video games, VR..
+Multimedia : MP3, JPG, HDTV, face recognition..
+Biology, Physics..
+
+The main reason that people study algorithms is to be able to solve problems that could not otherwise be addressed.
+
+Steps in devoloping a usable algorithm:
+- Model the problem ( try to understand what are the main elements of the problem that needs to be solved)
+- find an algorithm to solve it
+- fast enough? fits in memory?
+- if not, figure out why.
+- find a way to address the problem.
+- iterate until satisfied
+
+This is a scientific approach to designing and analyzing algorithms where, We build mathematical model to try to understand whats going on and 
+then we do experiments to validate those models and help us improve things.
