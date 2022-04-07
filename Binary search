@@ -65,5 +65,6 @@ Well, the first approach was to check each number, one by one. If this is a list
 If it’s a list of 4 billion numbers, it takes up to 4 billion guesses. So the maximum number of guesses is the same as the size of the list. 
 This is called linear time.
 Binary search is different. If the list is 100 items long, it takes at most 7 guesses. If the list is 4 billion items, it takes at most 32 guesses. 
-Powerful, eh? Binary search runs in logarithmic time (or log time, as the natives call it).
+Powerful, eh? Binary search runs in logarithmic time (or log time, as the natives call it). 
+--> The run times for binary search and simple search don’t grow at the same rate
 
