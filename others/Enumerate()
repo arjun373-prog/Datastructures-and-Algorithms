@@ -1,0 +1,18 @@
+The enumerate() method adds a counter to an iterable and returns it (the enumerate object).
+--------------------------
+example:
+
+languages = ['Python', 'Java', 'JavaScript']
+enumerate_prime = enumerate(languages)
+# convert enumerate object to list
+print(list(enumerate_prime))
+
+# Output: [(0, 'Python'), (1, 'Java'), (2, 'JavaScript')]
+--------------------------
+
+The syntax of enumerate() is:
+enumerate(iterable, start=0)
+
+enumerate() method takes two parameters:
+iterable - a sequence, an iterator, or objects that supports iteration
+start (optional) - enumerate() starts counting from this number. If start is omitted, 0 is taken as start.
