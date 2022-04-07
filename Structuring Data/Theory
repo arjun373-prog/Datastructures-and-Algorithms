@@ -1,0 +1,9 @@
+Before you can do anything with most data, you must structure it in some manner so that you can begin to see what the data contains (and, sometimes, what it 
+doesn’t). You aren’t changing the data in any way  — simply making the data more useful.
+
+Structure is an essential element in making algorithms work. Implementing an algorithm using structured data is much easier than trying 
+to figure out how to interpret the data in code. For example, the binary search example relies on having the data in sorted order. 
+Trying to perform the required comparisons with unsorted data would require a lot more effort and potentially prove impossible to implement.
+
+An essential need to meet as part of working with data is to understand the data content. A search algorithm works only when you understand the dataset so that 
+you know what to search for using the algorithm. Looking for words when the dataset contains numbers is an impossible task that always results in errors.
