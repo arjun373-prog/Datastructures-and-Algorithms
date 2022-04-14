@@ -1,0 +1,73 @@
+Given five positive integers, find the minimum and maximum values that can be calculated by summing exactly four of the five integers. 
+Then print the respective minimum and maximum values as a single line of two space-separated long integers.
+
+Sample Input
+1 2 3 4 5
+
+Sample Output
+10 14
+
+def miniMaxSum(arr):
+    arr.sort()
+    min=0
+    max=0
+    for i in range(len(arr)):
+        if i<len(arr)-1:
+            min+=arr[i]
+        if i>0:
+            max+=arr[i]
+    print(min,max)
+    
+if __name__ == '__main__':
+
+    arr = list(map(int, input().rstrip().split()))
+
+    miniMaxSum(arr)
+----------------------------
+def miniMaxSum(arr):
+    print(sum(arr[:-1]),sum(arr[1:]))
+------------------------------
+
+learnings:
+
+Sum of numbers in the list is required everywhere. Python provide an inbuilt function sum() which sums up the numbers in the list.
+
+Syntax:
+sum(iterable, start)
+
+start : this start is added to the sum of numbers in the iterable. 
+If start is not given in the syntax , it is assumed to be 0.
+
+-----------------------------------------
+
+list(map(int, input().strip().split()))[:I] 
+
+
+Let us break it down.
+
+--input() 
+This is used to fetch input from the user. In this case. We are expecting the user to provide a list of integers. How do I know? Look next.
+
+--input().strip() 
+This will eliminate trailing spaces from the user input, if they are there. Why is it required? Because some users will do that and that might break your program.
+
+Remember that input() will cast the input as string. So, now we have a string of integers like so: “1 2 4 42”
+
+--input.strip().split() 
+split() is used to create a Python list out of a string. If no delimiter is given, this breaks the string by spaces. So, now we have: [“1”, “2”, “4”, “42”]
+
+--map(int, input().strip().split()) 
+map() takes two arguments. The first one is the method to apply, the second one is the data to apply it to. 
+By this understanding, we can see this is doing nothing but typecasting every element of the list to an integer value. 
+Since map returns the data type it was applied to, the list() method applied over map() is redundant. 
+So now we have covered the following:
+
+--list(map(int, input().strip().split())) 
+And we have: [1, 2, 4, 42]
+
+Note the missing quotes. This means the elements are now all int.
+
+Now, the last bit.
+
+list(map(int, input().strip().split()))[:I] 
+takes the list we have obtained and returns only the first I elements.
