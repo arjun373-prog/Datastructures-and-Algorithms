@@ -1,0 +1,84 @@
+Given an array of integers, calculate the ratios of its elements that are positive, negative, and zero. 
+Print the decimal value of each fraction on a new line with  places after the decimal.\
+
+
+def plusMinus(arr):
+    # Write your code here
+    neg=0
+    pos=0
+    zero=0
+    for i in range(len(arr)):
+        if arr[i]<0:
+            neg+=1
+        elif arr[i]==0:
+            zero+=1
+        else:
+            pos+=1
+    print('%.6f'%(pos/len(arr)))
+    print('%.6f'%(neg/len(arr)))
+    print('%.6f'%(zero/len(arr)))
+    
+-----------------------------------------
+
+print(round(len([x for x in arr if x>0])/len(arr), 6))
+print(round(len([x for x in arr if x<0])/len(arr), 6))
+print(round(len([x for x in arr if x==0])/len(arr), 6))
+
+-----------------------------------------------------
+
+Learnings:
+
+
+Python String Formatting---
+
+The format() method allows you format string in any way you want.
+Syntax: template.format(p1, p1, .... , k1=v1, k2=v2)
+template is a string containing format codes, format() method uses it's argument to substitute value for each format codes. For e.g:
+
+>>> 'Sam has {0} red balls and {1} yellow balls'.format(12, 31)
+{0} and {1} are format codes. The format code {0} is replaced by the first argument of format() i.e 12, while {1} is replaced by the second argument of format() i.e 31.
+
+Expected Output:
+
+Sam has 12 red balls and 31 yellow balls
+
+This technique is okay for simple formatting but what if you want to specify precision in floating point number? For such thing you need to learn more about format codes. 
+Here is the full syntax of format codes.
+
+Syntax: {[argument_index_or_keyword]:[width][.precision][type]}
+
+Following examples will make things more clear.
+
+Example 1:
+
+>>> "Floating point {0:.2f}".format(345.7916732)
+Here we specify 2 digits of precision and f is used to represent floating point number.
+
+Expected Output:
+
+Floating point 345.79
+
+
+There is another old technique  you will see in legacy codes which allows you to format string using % operator instead of format() method.
+
+Let's take an example.
+
+"%d pens cost = %.2f" % (12, 150.87612)
+Here we are using template string on the left of %. Instead of {} for format codes we are using %.
+On the right side of % we use tuple to contain our values. %d and %.2f are called as format specifiers, they begin with % followed by character that represents the data type. 
+For e.g %d format specifier is a placeholder for a integer, similarly %.2f is a placeholder for floating point number.
+
+So %d is replaced by the first value of the tuple i.e 12 and %.2f is replaced by second value i.e 150.87612.
+
+Expected Output:
+
+12 pens cost = 150.88
+------------------------------------
+
+
+The round() function returns a floating point number that is a rounded version of the specified number, with the specified number of decimals.
+
+The default number of decimals is 0, meaning that the function will return the nearest integer.
+
+Syntax
+round(number, digits)
